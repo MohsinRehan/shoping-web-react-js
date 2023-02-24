@@ -1,0 +1,20 @@
+{
+  "image_data": [
+    {
+      "id": 1,
+      "image": "./Assets/image/a.jpeg"
+    },
+    {
+      "id": 2,
+      "image": "./Assets/image/b.jpeg"
+    },
+    {
+      "id": 3,
+      "image": "./Assets/image/c.jpeg"
+    },
+    {
+      "id": 4,
+      "image": "./Assets/image/d.jpeg"
+    }
+  ]
+}
