@@ -1,9 +1,9 @@
 import React, { Component } from "react";
+import Button from "../../../../components/Button";
 
 export default class Imagecontent extends Component {
   render() {
     return (
-      <>
         <div className="bg-[#F2EDEB] my-20 h-fit ">
           <div className="grid grid-cols-2 max-md:grid-cols-1 pt-20 ">
             <div className="my-20">
@@ -14,9 +14,9 @@ export default class Imagecontent extends Component {
                 You asked, we delivered. Thos’ best 100 recipes are now
                 available as a hardback and we deliver worldwide!
               </p>
-              <button className="bg-[#232323] ml-20  text-white font-bold my-5 px-10 py-4">
-                go to shop
-              </button>
+              <div className="ml-20">
+              <Button>go to shop</Button>
+              </div>
             </div>
             <div className="mt-8 ">
               <img
@@ -27,9 +27,7 @@ export default class Imagecontent extends Component {
             </div>
           </div>
         </div>
-        <div>
-        </div>
-      </>
+
     );
   }
 }

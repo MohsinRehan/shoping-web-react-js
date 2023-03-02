@@ -5,8 +5,6 @@ export default class Gallery extends Component {
     return (
       <>
         <div>
-         
-
           <div className="">
             <div>
               <img

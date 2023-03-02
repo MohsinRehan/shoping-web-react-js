@@ -1,5 +1,8 @@
 import React, { Component } from "react";
-import Home from "./pages/Home";
+import { BrowserRouter} from "react-router-dom";
+
+import Mainroute from "./Routes";
+
 
 
 export default class App extends Component {
@@ -8,7 +11,9 @@ export default class App extends Component {
   render() {
     return (
       <>
-     <Home/>
+     <BrowserRouter>
+      <Mainroute />
+     </BrowserRouter>
         
       </>
     );

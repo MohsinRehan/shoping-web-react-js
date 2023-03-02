@@ -1,11 +1,12 @@
 import React, { Component } from "react";
+import Button from "../Button";
 
 export default class NewsLetter extends Component {
   render() {
     return (
       <>
         <div className="w-100 bg-[#E8E3E1] ">
-          <div className="flex flex-col items-center justify-center py-20">
+          <div className="flex flex-col items-center justify-center pt-10 pb-24">
             <h1 className="text-[24px] font-bold ml-[60px] my-5">
               Subscribe to our newsletter
             </h1>
@@ -19,9 +20,9 @@ export default class NewsLetter extends Component {
               />
             </div>
             <div>
-              <button className="bg-[#232323]   text-white font-bold my-5 px-10 py-4">
+              <Button>
                 Subscribe
-              </button>
+              </Button>
             </div>
             <div className="text-[20px]">
               <span className="mr-4">
