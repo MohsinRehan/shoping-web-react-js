@@ -27,4 +27,12 @@ export const URL = {
     ROUTE: "login",
     BASE: "/login",
   },
+  SIGNUP: {
+    ROUTE: "signup",
+    BASE: "/signup",
+  },
+  ADMINDASHBOARD: {
+    ROUTE: "admindashboard",
+    BASE: "/admindashboard",
+  },
 };

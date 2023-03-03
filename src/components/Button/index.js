@@ -14,7 +14,7 @@ export default class Button extends Component {
             : ""
         }`}
       >
-        <button className="py-3 px-5 bg-black text-white my-5">
+        <button className="py-3 px-8 bg-black text-white my-5">
           {this.props.children}
         </button>
       </div>

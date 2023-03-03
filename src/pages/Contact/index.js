@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../../components/Button";
 import PageLayout from "../../layout";
 
 export default function index() {
@@ -49,6 +50,7 @@ export default function index() {
           className="bg-[#F1F1F1] w-[100%] h-20 py-4 px-4 mb-6 outline-none"
           placeholder="Enter your message"
         ></textarea>
+        <Button center>Submit</Button>
       </div>
     </PageLayout>
   );
