@@ -8,7 +8,7 @@ const GoogleButton = ({ text }) => {
         className="text-white bg-black hover:bg-[#6e6d7a]/90 focus:ring-4 focus:outline-none focus:ring-[#4285F4]/50 font-medium rounded-lg text-sm px-8 py-2.5 text-center inline-flex items-center dark:focus:ring-[#4285F4]/55 mr-2 mb-2"
       >
         <svg
-          class="w-4 h-4 mr-2 -ml-1"
+          className="w-4 h-4 mr-2 -ml-1"
           aria-hidden="true"
           focusable="false"
           data-prefix="fab"

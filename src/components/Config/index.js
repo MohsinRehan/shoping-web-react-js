@@ -33,6 +33,18 @@ export const URL = {
   },
   ADMINDASHBOARD: {
     ROUTE: "admindashboard",
-    BASE: "/admindashboard",
+    BASE: "/Admindashboard",
   },
+  ADMINBLOG: {
+    ROUTE: "adminblog",
+    BASE: "/adminblog",
+  },
+  PRODUCTS: {
+    ROUTE: "products",
+    BASE: "/products",
+  },
+  ACCOUNTSETTING: {
+    ROUTE: "accountsetting",
+    BASE: "/accountsetting",
+  }
 };

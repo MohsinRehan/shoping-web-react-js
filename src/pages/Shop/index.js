@@ -16,7 +16,7 @@ export default function Shop() {
         </a>
         <div className="mt-10 mb-4">
           <img
-            className="h-[430px] scale-60  hover:scale-150 hover:border-0 ease-in duration-500 border-[30px] border-[#DED5D0] border-solid w-[100%]"
+            className="h-[430px] scale-60  hover:scale-100 hover:border-0 ease-in duration-500 border-[30px] border-[#DED5D0] border-solid w-[100%]"
             src="/Assets/image/bookimg.jpg"
             alt="book image"
           />

@@ -1,14 +1,17 @@
-import React from 'react'
-import TopHeader  from './component/header'
-import  LeftNavbar  from './component/leftsidenav'
+import React, { Children } from "react";
+import TopHeader from "./component/header";
+import LeftNavbar from "./component/leftsidenav";
 
-const Adminlayout = () => {
+const Adminlayout = ({ children }) => {
   return (
-   <>
+    <>
       <TopHeader />
-      <LeftNavbar/>
-   </>
-  )
-}
+      <div className="flex">
+        <LeftNavbar />
+        {children}
+      </div>
+    </>
+  );
+};
 
-export default Adminlayout
+export default Adminlayout;
