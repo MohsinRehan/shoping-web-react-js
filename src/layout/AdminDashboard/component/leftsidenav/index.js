@@ -4,11 +4,16 @@ import { FaBloggerB } from "react-icons/fa";
 import { FaProductHunt } from "react-icons/fa";
 import { AiFillSetting } from "react-icons/ai";
 import { BiLogOut } from "react-icons/bi";
-import { MdSystemUpdateAlt } from "react-icons/md";
 import { URL } from "../../../../components/Config";
 import { NavLink } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const LeftNavbar = () => {
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    localStorage.removeItem("auth");
+    return  navigate(URL.LOGIN.BASE);
+  };
   return (
     <>
       <aside className="h-[518px] w-[20%] flex flex-col  space-y-10 justify-center relative bg-black text-white">
@@ -27,7 +32,7 @@ const LeftNavbar = () => {
           </div>
           <div>
             {" "}
-            <NavLink to="/Adminblog" className="cursor-pointer">
+            <NavLink to={URL.ADMINBLOG.BASE} className="cursor-pointer">
               Blogs
             </NavLink>
           </div>
@@ -38,7 +43,7 @@ const LeftNavbar = () => {
             <FaProductHunt />
           </div>
           <div>
-            <NavLink to="/Products" className="cursor-pointer">
+            <NavLink to={URL.PRODUCTS.BASE} className="cursor-pointer">
               Products
             </NavLink>
           </div>
@@ -49,7 +54,7 @@ const LeftNavbar = () => {
             <AiFillSetting />
           </div>
           <div>
-            <NavLink to="/Accountsetting" className="cursor-pointer">
+            <NavLink to={URL.ACCOUNTSETTING.BASE} className="cursor-pointer">
               Account Settings
             </NavLink>
           </div>
@@ -60,9 +65,9 @@ const LeftNavbar = () => {
           </div>
           <div>
             {" "}
-            <a href="" className="cursor-pointer">
-              Settings
-            </a>
+            <button onClick={handleLogout} href="" className="cursor-pointer">
+              Logout
+            </button>
           </div>
         </div>
       </aside>

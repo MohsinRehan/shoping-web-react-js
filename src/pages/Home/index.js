@@ -8,10 +8,12 @@ import * as FOOD_DATA from "./data/index.json";
 import * as IMAGE_DATA from "./data/gallery.json";
 import Gallery from "./components/Gallery";
 import PageLayout from "../../layout";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
   const [data] = useState({ ...FOOD_DATA }.data);
   const [arrimage] = useState({ ...IMAGE_DATA }.image_data);
+  const { t } = useTranslation();
   return (
     <PageLayout>
       <Header />
@@ -23,7 +25,7 @@ const Home = () => {
       <Button center>More Articles</Button>
       <Imagecontent />
       <div className="text-center font-bold text-[44px]">
-        <h1>Follow on Instagram @Thos</h1>
+        <h1>{t("follow-instagram")}</h1>
       </div>
       <div className="grid grid-cols-4 gap-6 mx-20 my-20">
         {arrimage.map((item) => {

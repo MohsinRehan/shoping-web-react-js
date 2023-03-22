@@ -1,18 +1,20 @@
 import React from "react";
 import PageLayout from "../../layout";
+import { useTranslation } from "react-i18next";
 
 export default function Shop() {
+  const { t } = useTranslation();
   return (
     <PageLayout>
       <h1 className="text-[60px] my-20 text-center font-bold text-[#232323]">
-        Shop
+        {t("Shop")}
       </h1>
       <div className="w-[30%] m-auto">
         <a className="flex flex-col items-center cursor-pointer">
           <span className="text-[18px] mr-2">
             <i className="fal fa-shopping-bag"></i>
           </span>
-          Shopping bag
+          {t("Shopping Bag")}
         </a>
         <div className="mt-10 mb-4">
           <img
@@ -23,7 +25,7 @@ export default function Shop() {
         </div>
         <div className="flex justify-between items-center">
           <div>
-            <a className="text-[20px] cursor-pointer">The best of Thos</a>
+            <a className="text-[20px] cursor-pointer">{t("best-Thos")}</a>
           </div>
           <div>
             <a className="text-[30px] font-bold cursor-pointer">$0.002</a>

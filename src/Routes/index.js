@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "../pages/Home";
 import Blog from "../pages/Blog";
@@ -13,24 +13,44 @@ import Adminblog from "../layout/Page/Blog";
 import Products from "../layout/Page/Products";
 import AccountSetting from "../layout/Page/Accountsetting";
 import { URL } from "../components/Config";
+import PrivateRoutes from "./private";
+import PublicRoutes from "./public";
 
-export default class Mainroute extends Component {
-  render() {
-    return (
-      <Routes>
-        <Route path={URL.HOME.BASE} element={<Home />} />
-        <Route path={URL.BLOG.BASE} element={<Blog />} />
-        <Route path={URL.SHOP.BASE} element={<Shop />} />
-        <Route path={URL.ABOUT.BASE} element={<About />} />
-        <Route path={URL.CONTACT.BASE} element={<Contact />} />
-        <Route path={URL.BLOG.BLOGPOST.BASE} element={<Blogpost />} />
-        <Route path={URL.LOGIN.BASE} element={<Login />} />
-        <Route path={URL.SIGNUP.BASE} element={<SignUp />} />
+const Mainroute = () => {
+  const [authenticate, setAuthenticate] = useState(false);
+
+  useEffect(() => {
+    const auth = localStorage.getItem("auth");
+    if (auth) {
+      setAuthenticate(true);
+    }
+  }, []);
+
+  return (
+    <Routes>
+      <Route path={URL.HOME.BASE} element={<Home />} />
+      <Route path={URL.BLOG.BASE} element={<Blog />} />
+      <Route path={URL.SHOP.BASE} element={<Shop />} />
+      <Route path={URL.ABOUT.BASE} element={<About />} />
+      <Route path={URL.CONTACT.BASE} element={<Contact />} />
+      <Route path={URL.BLOG.BLOGPOST.BASE} element={<Blogpost />} />
+
+      <Route
+        path={URL.ADMINDASHBOARD.BASE}
+        element={<PrivateRoutes authenticate={authenticate} />}
+      >
         <Route path={URL.ADMINDASHBOARD.BASE} element={<DashboardAdmin />} />
         <Route path={URL.ADMINBLOG.BASE} element={<Adminblog />} />
         <Route path={URL.PRODUCTS.BASE} element={<Products />} />
         <Route path={URL.ACCOUNTSETTING.BASE} element={<AccountSetting />} />
-      </Routes>
-    );
-  }
-}
+      </Route>
+
+      <Route element={<PublicRoutes authenticate={authenticate} />}>
+        <Route path={URL.LOGIN.BASE} element={<Login />} />
+        <Route path={URL.SIGNUP.BASE} element={<SignUp />} />
+      </Route>
+    </Routes>
+  );
+};
+
+export default Mainroute;

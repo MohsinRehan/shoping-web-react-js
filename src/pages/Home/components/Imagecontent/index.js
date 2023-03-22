@@ -1,21 +1,22 @@
 import React, { Component } from "react";
 import Button from "../../../../components/Button";
+import { useTranslation } from "react-i18next";
 
-export default class Imagecontent extends Component {
-  render() {
+const Imagecontent = () =>  {
+  const { t } = useTranslation();
     return (
         <div className="bg-[#F2EDEB] my-20 h-fit ">
           <div className="grid grid-cols-2 max-md:grid-cols-1 pt-20 ">
             <div className="my-20">
               <h1 className="text-[43px] font-bold mr- pl-20 pr-[180px]">
-                It’s official: The best of Thos
+               {t("official")}
               </h1>
               <p className="text-[18px] my-10 pl-20 pr-[180px]">
-                You asked, we delivered. Thos’ best 100 recipes are now
-                available as a hardback and we deliver worldwide!
+                {t("You asked,")} {t("we delivered")}. {t("Thos")} {t("best 100 recipes are now")}
+                {t("available as a hardback and we deliver worldwide!")}
               </p>
               <div className="ml-20">
-              <Button>go to shop</Button>
+              <Button>{t("go-to-shop")}</Button>
               </div>
             </div>
             <div className="mt-8 ">
@@ -29,5 +30,6 @@ export default class Imagecontent extends Component {
         </div>
 
     );
-  }
 }
+
+export default Imagecontent;

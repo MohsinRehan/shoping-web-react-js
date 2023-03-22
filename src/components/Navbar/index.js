@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <nav className="w-full bg-white sticky top-0 shadow-md flex justify-between flex-wrap items-center p-4 pl-8">
       <NavLink to={URL.HOME.BASE} className="text-[30px] font-bold">
-        Thos {t("test")}
+        {t("Thos")}
       </NavLink>
       <ul className="flex flex-wrap gap-10 p-4">
         <li>
@@ -49,7 +49,7 @@ const Navbar = () => {
               return { borderBottom: isActive ? "1px solid black" : "" };
             }}
           >
-            About
+            {t("About")}
           </NavLink>
         </li>
         <li>
@@ -61,7 +61,7 @@ const Navbar = () => {
               return { borderBottom: isActive ? "1px solid black" : "" };
             }}
           >
-            Contact
+            {t("Contact")}
           </NavLink>
         </li>
         <li>
@@ -75,7 +75,7 @@ const Navbar = () => {
             <span className="text-[18px] mr-2">
               <i className="fal fa-shopping-bag"></i>
             </span>
-            Shopping Bag
+            {t("Shopping Bag")}
           </NavLink>
         </li>
         <LanguageChange onChange={(e) => handleClicked(e)} />

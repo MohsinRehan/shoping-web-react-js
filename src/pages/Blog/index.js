@@ -3,14 +3,16 @@ import { useState } from "react";
 import Card from "../../components/Card";
 import PageLayout from "../../layout";
 import * as IMAGE_DATA from "../Blog/data/bloggallery.json";
+import { useTranslation } from "react-i18next";
 
 const Blog = () => {
   const [blogData] = useState({ ...IMAGE_DATA }.data);
+  const { t } = useTranslation();
 
   return (
     <PageLayout>
       <h1 className="text-[60px] my-20 text-center font-bold text-[#232323]">
-        Blog
+        {t("Blog")}
       </h1>
       <div className="grid grid-cols-3 max-md:grid-cols-1 ml-8 mt-[150px] ">
         {blogData.map((item) => (

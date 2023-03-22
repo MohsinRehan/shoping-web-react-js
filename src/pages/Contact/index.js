@@ -1,18 +1,19 @@
 import React from "react";
 import Button from "../../components/Button";
 import PageLayout from "../../layout";
+import { useTranslation } from "react-i18next";
 
-export default function index() {
+const Contact= () => {
+  const { t } = useTranslation();
   return (
     <PageLayout>
       <div>
         <h1 className="text-center text-[#232323]  text-[65px] font-bold mt-28">
-          Get in touch
+         {t("touch")}
         </h1>
         <p className="text-center text-[#232323]  py-10">
-          Have you got a suggestion or a blog post idea? Or maybe you represent
-          <br />a company and would like to work on a partnership? I would love
-          to hear from you!
+          {t("suggestion")} {t("represent")}
+          <br />{t("partnership")}{t("hear")}
         </p>
       </div>
       <div className="flex items-center flex-col">
@@ -20,38 +21,40 @@ export default function index() {
         <span className="text-[#232323]">123-456-7890</span>
       </div>
       <div className="container w-2/4 mx-auto">
-        <label className="text-[18px] my-2 text-[#232323]">Name*</label>
+        <label className="text-[18px] my-2 text-[#232323]">{t("Name")}</label>
         <br />
         <input
           type="text"
           className="bg-[#F1F1F1] w-[100%] py-3 px-4 mb-6 outline-none"
-          placeholder="Your Name"
+          placeholder={t("nameplacholder")}
         />
         <br />
-        <label className="text-[18px] my-2 text-[#232323]">Last name*</label>
+        <label className="text-[18px] my-2 text-[#232323]">{t("Last-name")}</label>
         <br />
         <input
           type="text"
           className="bg-[#F1F1F1] w-[100%] py-3 px-4 mb-6 outline-none"
-          placeholder="Your last name"
+          placeholder={t("lnameplaceholder")}
         />
         <br />
-        <label className="text-[18px] my-2 text-[#232323]">Your email*</label>
+        <label className="text-[18px] my-2 text-[#232323]">Your {t("email")}</label>
         <br />
         <input
           type="text"
           className="bg-[#F1F1F1] w-[100%] py-3 px-4 mb-6 outline-none"
-          placeholder="Your email address"
+          placeholder={t("emailplaceholder")}
         />
         <br />
-        <label className="text-[18px] my-2 text-[#232323]">Message*</label>
+        <label className="text-[18px] my-2 text-[#232323]">{t("Message")}</label>
         <br />
         <textarea
           className="bg-[#F1F1F1] w-[100%] h-20 py-4 px-4 mb-6 outline-none"
-          placeholder="Enter your message"
+          placeholder={t("mgsplaceholder")}
         ></textarea>
-        <Button center>Submit</Button>
+        <Button center>{t("Submit")}</Button>
       </div>
     </PageLayout>
   );
 }
+
+export default Contact;
