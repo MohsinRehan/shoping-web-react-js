@@ -1,4 +1,5 @@
 import React from "react";
+import { LoginSocialGoogle } from "reactjs-social-login";
 
 const GoogleButton = ({ text }) => {
   return (

@@ -16,14 +16,14 @@ export default function Shop() {
           </span>
           {t("Shopping Bag")}
         </a>
-        <div className="mt-10 mb-4">
+        <div className="mt-8 mb-4">
           <img
             className="h-[430px] scale-60  hover:scale-100 hover:border-0 ease-in duration-500 border-[30px] border-[#DED5D0] border-solid w-[100%]"
             src="/Assets/image/bookimg.jpg"
             alt="book image"
           />
         </div>
-        <div className="flex justify-between items-center">
+        <div className="flex my-3 justify-between items-center">
           <div>
             <a className="text-[20px] cursor-pointer">{t("best-Thos")}</a>
           </div>

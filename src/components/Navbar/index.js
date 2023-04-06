@@ -15,17 +15,17 @@ const Navbar = () => {
       <NavLink to={URL.HOME.BASE} className="text-[30px] font-bold">
         {t("Thos")}
       </NavLink>
-      <ul className="flex flex-wrap gap-10 p-4">
+      <ul className="flex flex-wrap items-center	 gap-10 p-4">
         <li>
           {" "}
           <NavLink
-            to="/Blog"
+            to="/Product"
             className="pb-1 hover:border-b-[1px] border-black"
             style={({ isActive }) => {
               return { borderBottom: isActive ? "1px solid black" : "" };
             }}
           >
-            {t("Blog")}
+            {t("Product")}
           </NavLink>
         </li>
         <li>

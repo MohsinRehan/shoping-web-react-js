@@ -7,11 +7,13 @@ const AccountSetting = () => {
   const [image, setImage] = useState("");
   return (
     <Adminlayout>
-      <h1 className="px-5 py-5 text-[30px] font-bold">Account Setting</h1>
-      <div className="w-[55%] mt-10 h-[450px] overflow-y-scroll scroll-hide">
+      <h1 className="px-5 py-5 text-[30px] text-center font-bold">
+        Account Setting
+      </h1>
+      <div className="w-[100%] mt-10 h-[390px] overflow-hidden	 overflow-y-scroll">
         <h3 className="text-[20px] py-4 bold text-center">Update Profile</h3>
-        <div class="flex items-center justify-center bg-grey-lighter">
-          <label class="flex flex-col items-center px-4 py-6 text-blue  cursor-pointer">
+        <div className="flex items-center justify-center bg-grey-lighter">
+          <label className="flex flex-col items-center px-4 py-6 text-blue  cursor-pointer">
             <input
               className="my-4 hidden "
               type="file"
@@ -30,7 +32,7 @@ const AccountSetting = () => {
                 className="w-28 h-28 rounded-full "
               />
             )}
-            <span class="mt-2 text-base leading-normal bg-blue-600 text-white px-2 py-1">
+            <span className="mt-4 text-base leading-normal bg-blue-600 text-white px-2 py-1">
               Update Image
             </span>
           </label>

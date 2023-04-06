@@ -1,7 +1,7 @@
 import React, { Component, useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "../pages/Home";
-import Blog from "../pages/Blog";
+import Product from "../pages/Blog";
 import About from "../pages/About";
 import Shop from "../pages/Shop";
 import Contact from "../pages/Contact";
@@ -12,6 +12,7 @@ import DashboardAdmin from "../pages/AdminScreen/admin";
 import Adminblog from "../layout/Page/Blog";
 import Products from "../layout/Page/Products";
 import AccountSetting from "../layout/Page/Accountsetting";
+import  ShopCart from "../pages/Shopingcart";
 import { URL } from "../components/Config";
 import PrivateRoutes from "./private";
 import PublicRoutes from "./public";
@@ -29,11 +30,12 @@ const Mainroute = () => {
   return (
     <Routes>
       <Route path={URL.HOME.BASE} element={<Home />} />
-      <Route path={URL.BLOG.BASE} element={<Blog />} />
+      <Route path={URL.PRODUCT.BASE} element={<Product />} />
       <Route path={URL.SHOP.BASE} element={<Shop />} />
       <Route path={URL.ABOUT.BASE} element={<About />} />
       <Route path={URL.CONTACT.BASE} element={<Contact />} />
-      <Route path={URL.BLOG.BLOGPOST.BASE} element={<Blogpost />} />
+      <Route path={URL.PRODUCT.PRODUCTORDER.BASE} element={<Blogpost />} />
+      <Route path={URL.SHOPING.BASE} element={<ShopCart />} />
 
       <Route
         path={URL.ADMINDASHBOARD.BASE}

@@ -6,6 +6,7 @@ import { Navigate, useNavigate } from "react-router-dom";
 import { URL } from "../../../components/Config";
 
 
+
 export default function Login(props) {
   const navigate = useNavigate();
 
@@ -32,9 +33,13 @@ export default function Login(props) {
         <h1>{props.headingText}</h1>
         <Input />
         <div className="flex justify-center">
-        <button className="py-3 px-8 bg-black text-white my-5" onClick={handleLogin}>
-          Sign In
-        </button>
+          <button
+            className="py-3 px-8 bg-black text-white my-5"
+            onClick={handleLogin}
+          >
+            Sign In
+          </button>
+          
         </div>
       </div>
     </Authlayout>

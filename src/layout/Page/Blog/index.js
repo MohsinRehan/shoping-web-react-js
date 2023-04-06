@@ -6,12 +6,10 @@ import Addblog from "../../AdminDashboard/component/addBlog";
 const AdminBlog = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [formData, setFormData] = useState([]);
-
-  console.log(formData);
   return (
-    <Adminlayout>
-      <h1 className="px-5 py-5 text-[30px] font-bold">Blog</h1>
-      <div className="w-[70%] h-96 flex flex-wrap gap-4 mx-5 my-5 overflow-y-scroll">
+    <Adminlayout className="flex">
+      <div className="h-96 gap-4 mx-5 my-5 overflow-y-scroll scroll-hidden">
+        <h1 className="px-5 py-5 text-[30px] font-bold text-center">Blog</h1>
         {formData &&
           formData.map((item, i) => (
             <div

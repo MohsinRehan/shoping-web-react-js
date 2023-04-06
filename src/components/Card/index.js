@@ -7,14 +7,14 @@ const Card = ({ item }) => {
 
   return (
     <div
-      onClick={() => navigate(URL.BLOG.BLOGPOST.BASE.replace(":id", item.id))}>
+      onClick={() => navigate(URL.PRODUCT.PRODUCTORDER.BASE.replace(":id", item.id))}>
       <div className="container  m-auto">
         <div className="mr-16">
-          <img src={item.image} className="w-[100%]" alt="" />
-          <h1 className="text-[24px] font-bold py-2">{item.title}</h1>
-          <p className="py-1">{item.description}</p>
+          <img src={item.img} className="w-[100%] h-[250px]" alt="" />
+          <h1 className="text-[24px] font-bold py-2">{item.name}</h1>
+          <p className="py-1">{item.descrption}</p>
           <p>{item.createdA}</p>
-          <p className="mt-1 mb-10">{item.date}</p>
+          <p className="mt-1 mb-10">{item.Price}</p>
         </div>
       </div>
     </div>

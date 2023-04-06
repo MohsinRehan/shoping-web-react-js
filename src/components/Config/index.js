@@ -7,12 +7,12 @@ export const URL = {
     ROUTE: "about",
     BASE: "/about",
   },
-  BLOG: {
-    ROUTE: "blog",
-    BASE: "/blog",
-    BLOGPOST: {
-      ROUTE: "blogpost",
-      BASE: "/blogpost/:id",
+  PRODUCT: {
+    ROUTE: "product",
+    BASE: "/Product",
+    PRODUCTORDER: {
+      ROUTE: "product",
+      BASE: "/Product/:id",
     },
   },
   SHOP: {
@@ -22,6 +22,10 @@ export const URL = {
   CONTACT: {
     ROUTE: "contact",
     BASE: "/contact",
+  },
+  SHOPING: {
+    ROUTE: "shoping",
+    BASE: "/shoping",
   },
   LOGIN: {
     ROUTE: "login",

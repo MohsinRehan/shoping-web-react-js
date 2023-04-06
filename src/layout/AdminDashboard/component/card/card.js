@@ -5,7 +5,7 @@ import { IoIosArrowForward } from "react-icons/io";
   return (
     <>
       <div className="bg-white shadow  w-80 h-28 mt-6 ml-10 flex-wrap rounded  flex justify-between items-center relative">
-        <div className="text-white rounded text-[20px] p-2 bg-[#1F2937] absolute left-4 top-10">
+        <div className="text-white rounded text-[20px] p-2 bg-[#000] absolute left-4 top-10">
           {icon}
         </div>
         <div className="ml-20 mt-1">

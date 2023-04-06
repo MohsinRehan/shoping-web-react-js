@@ -16,9 +16,9 @@ const LeftNavbar = () => {
   };
   return (
     <>
-      <aside className="h-[518px] w-[20%] flex flex-col  space-y-10 justify-center relative bg-black text-white">
+      <aside className="h-[518px] w-[300px] flex flex-col  space-y-10 justify-center relative bg-black text-white">
         <div className="flex items-center ">
-          <div className="h-6 w-20 flex items-center justify-center rounded-lg cursor-pointer ">
+          <div className="h-6 w-[110px] flex items-center justify-center rounded-lg cursor-pointer ">
             <RxDashboard />
           </div>
           <NavLink to={URL.ADMINDASHBOARD.BASE} className="cursor-pointer">
@@ -27,7 +27,7 @@ const LeftNavbar = () => {
         </div>
 
         <div className="flex items-center ">
-          <div className="h-6 w-20 flex items-center justify-center rounded-lg cursor-pointer ">
+          <div className="h-6 w-[110px] flex items-center justify-center rounded-lg cursor-pointer ">
             <FaBloggerB />
           </div>
           <div>
@@ -39,7 +39,7 @@ const LeftNavbar = () => {
         </div>
 
         <div className="flex items-center ">
-          <div className="h-10 w-20 flex text-white  items-center justify-center rounded-lg cursor-pointer ">
+          <div className="h-10 w-[110px] flex text-white  items-center justify-center rounded-lg cursor-pointer ">
             <FaProductHunt />
           </div>
           <div>
@@ -50,7 +50,7 @@ const LeftNavbar = () => {
         </div>
 
         <div className="flex items-center ">
-          <div className="h-6 w-20 flex items-center justify-center rounded-lg cursor-pointer ">
+          <div className="h-6 w-[110px] flex items-center justify-center rounded-lg cursor-pointer ">
             <AiFillSetting />
           </div>
           <div>
@@ -60,7 +60,7 @@ const LeftNavbar = () => {
           </div>
         </div>
         <div className="flex items-center ">
-          <div className="h-6 w-20 flex items-center justify-center rounded-lg cursor-pointer ">
+          <div className="h-6 w-[110px] flex items-center justify-center rounded-lg cursor-pointer ">
             <BiLogOut />
           </div>
           <div>

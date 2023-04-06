@@ -7,8 +7,12 @@ const Adminlayout = ({ children }) => {
     <>
       <TopHeader />
       <div className="flex">
-        <LeftNavbar />
-        {children}
+       <div>
+       <LeftNavbar />
+       </div>
+       <div className="w-[100%]">
+       {children}
+       </div>
       </div>
     </>
   );

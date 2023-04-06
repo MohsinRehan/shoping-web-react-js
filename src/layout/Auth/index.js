@@ -2,6 +2,7 @@ import React, { Children } from "react";
 import GoogleButton from "../../components/GoogleButton";
 import LeftSideLogo from "./components/LeftSideLogo";
 import VerticalText from "./components/Verticaltext";
+import { LoginSocialGoogle } from "reactjs-social-login";
 
 export const Authlayout = ({
   children,
@@ -24,7 +25,21 @@ export const Authlayout = ({
         <h1 className="text-[30px] font-bold text-center ml-2 mt-16 ">
           {headingText}
         </h1>
-        <GoogleButton text={googleText}/>
+        <LoginSocialGoogle
+        client_id={"221310050369-phnaakk186s62v34migb97jupuc9q93b.apps.googleusercontent.com"}
+        scope="openid profile email"
+        discoveryDocs="claims_supported"
+        access_type="offline"
+        onResolve={({ provider, data }) => {
+          console.log( data);
+        localStorage.setItem('acces_data' ,  JSON.stringify(data))
+        }}
+        onReject={(err) => {
+          console.log(err);
+        }}
+      >
+        <GoogleButton text={googleText}  />
+      </LoginSocialGoogle>
         <VerticalText vertext={word}/>
         {children}
       </div>

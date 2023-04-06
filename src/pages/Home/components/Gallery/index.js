@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 export default class Gallery extends Component {
+  
   render() {
     return (
       <>
@@ -12,6 +13,7 @@ export default class Gallery extends Component {
                 alt="BJJHK"
                 className="w-full h-[330px]"
               />
+             
             </div>
           </div>
         </div>

@@ -4,14 +4,15 @@ const Addblog = ({
   toggleForm,
   setFormData,
   lable = "Price",
-  inputType = "text",
+  inputType = "number",
 }) => {
   const [name, setName] = useState("");
   const [descrpt, setDescpt] = useState("");
   const [lableName, setLableName] = useState({ [lable]: "" });
   const [image, setImage] = useState("");
+  const [previewUrl, setPreviewUrl] = useState("");
 
-  const openPopup = (e) => {
+  const openPopup = async (e) => {
     const newAddproduct = {
       name: name,
       descrption: descrpt,
@@ -20,6 +21,22 @@ const Addblog = ({
     };
     setFormData((prev) => [...prev, newAddproduct]);
     toggleForm();
+  };
+
+  const handleFileSelect = (event) => {
+    const file = event.target.files[0];
+    // setImage(file);
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setImage(reader.result);
+        const imageUrl = URL.createObjectURL(file);
+        setPreviewUrl(imageUrl);
+      };
+      reader.readAsDataURL(file);
+    } else {
+      setPreviewUrl("");
+    }
   };
 
   return (
@@ -72,19 +89,20 @@ const Addblog = ({
         </div>
       </div>
 
-      <div class="w-[50%]  items-center justify-center bg-grey-lighter">
-        <label class="flex flex-col items-center px-4 py-6 text-blue  cursor-pointer">
+      <div className="w-[50%]  items-center justify-center bg-grey-lighter">
+        <label className="flex flex-col items-center px-4 py-6 text-blue  cursor-pointer">
           <input
             className="my-4 hidden "
             type="file"
-            onChange={(e) => setImage(e.target.files[0])}
+            accept="image/*"
+            onChange={handleFileSelect}
           />
           {image ? (
-            <img src={URL.createObjectURL(image)} className="w-500 h-52" />
+            <img src={previewUrl} className="w-500 h-52" />
           ) : (
-            <img src="Assets/image/preview.png" className="w-52" />
+            <img src="Assets/image/preview.png" alt="" className="w-52" />
           )}
-          <span class="mt-2 text-base leading-normal bg-blue-600 text-white px-5 py-3">
+          <span className="mt-2 text-base leading-normal bg-blue-600 text-white px-5 py-3">
             Upload Image
           </span>
         </label>
