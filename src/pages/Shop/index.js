@@ -18,17 +18,17 @@ export default function Shop() {
         </a>
         <div className="mt-8 mb-4">
           <img
-            className="h-[430px] scale-60  hover:scale-100 hover:border-0 ease-in duration-500 border-[30px] border-[#DED5D0] border-solid w-[100%]"
+            className="h-[430px] scale-60  hover:scale-100 hover:border-0 ease-in duration-500 border-[30px] border-[#DED5D0] border-solid w-[100%] max-sm:h-[230px] max-sm:border-[10px]"
             src="/Assets/image/bookimg.jpg"
             alt="book image"
           />
         </div>
         <div className="flex my-3 justify-between items-center">
           <div>
-            <a className="text-[20px] cursor-pointer">{t("best-Thos")}</a>
+            <a className="text-[20px] cursor-pointer max-sm:text-[10px]">{t("best-Thos")}</a>
           </div>
           <div>
-            <a className="text-[30px] font-bold cursor-pointer">$0.002</a>
+            <a className="text-[30px] font-bold cursor-pointer max-sm:text-[15px]">$0.002</a>
           </div>
         </div>
       </div>

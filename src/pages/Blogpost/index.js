@@ -13,25 +13,27 @@ export default function Blogpost() {
 
   const handleAddToCart = () => {
     setIsSelected(true);
-    
   };
 
-  useEffect(()=>{
-    handleAddToCart();
-  },[])
-
-  const addMore = () => {};
+  const addMore = () => {
+    setIsSelected(false);
+  };
 
   let navigate = useNavigate();
 
-  const toCheck = () => {
+  const toCheck = (productItem) => {
     const emptyData = JSON.parse(localStorage.getItem('sendData')) || [];
-    emptyData.push(productItem);
+    const existingItem = emptyData.find((cartItem) => cartItem.id === productItem.id);
+    if (existingItem) {
+      existingItem.quantity += 1;
+    } else {
+      emptyData.push({ ...productItem, quantity: 1 });
+    }
+    // emptyData.push(productItem);
     localStorage.setItem("sendData", JSON.stringify(emptyData));
     navigate("/Shoping");
   };
 
- 
   return (
     <PageLayout>
       <div className="container flex my-20 mx-10">
@@ -54,25 +56,23 @@ export default function Blogpost() {
             >
               Add to Cart
             </button>
-          ) : null}
-          {isSelected ? (
-          <div>
-            <button
-            onClick={addMore}
-            className="w-[90%] bg-[#fff] px-5 py-3 text-black m4-2 border-[1px] border-[#DED5D0] border-solid"
-          >
-            Add More
-          </button>
-          <br />
-          
-            <button
-              onClick={toCheck}
-              className="w-[90%] bg-[#333333] px-5 py-3 text-white my-4"
-            >
-              Go to Checkout
-            </button>
-          </div>
-          ) : null}
+          ) : (
+            <div>
+              <button
+                onClick={addMore}
+                className="w-[90%] bg-[#fff] px-5 py-3 mt-4 text-black m4-2 border-[1px] border-[#DED5D0] border-solid"
+              >
+                Add More
+              </button>
+              <br />
+              <button
+                onClick={()=>toCheck(productItem)}
+                className="w-[90%] bg-[#333333] px-5 py-3 text-white my-4"
+              >
+                Go to Checkout
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </PageLayout>

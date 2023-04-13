@@ -18,6 +18,7 @@ const Addblog = ({
       descrption: descrpt,
       [lable]: lableName[lable],
       img: image,
+      
     };
     setFormData((prev) => [...prev, newAddproduct]);
     toggleForm();

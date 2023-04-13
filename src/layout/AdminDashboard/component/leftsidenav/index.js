@@ -6,7 +6,7 @@ import { AiFillSetting } from "react-icons/ai";
 import { BiLogOut } from "react-icons/bi";
 import { URL } from "../../../../components/Config";
 import { NavLink } from "react-router-dom";
-import { Navigate, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 
 const LeftNavbar = () => {
   const navigate = useNavigate();
@@ -33,7 +33,7 @@ const LeftNavbar = () => {
           <div>
             {" "}
             <NavLink to={URL.ADMINBLOG.BASE} className="cursor-pointer">
-              Blogs
+              Order
             </NavLink>
           </div>
         </div>

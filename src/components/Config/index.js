@@ -41,7 +41,7 @@ export const URL = {
   },
   ADMINBLOG: {
     ROUTE: "adminblog",
-    BASE: "/admin/dashboard/blog",
+    BASE: "/admin/dashboard/order",
   },
   PRODUCTS: {
     ROUTE: "products",
