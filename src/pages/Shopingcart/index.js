@@ -2,8 +2,11 @@ import React, { useEffect, useState } from "react";
 import PageLayout from "../../layout";
 import { CheckoutCart } from "../../components/ShopingCart";
 import CheckoutPage from "../../components/Checkout";
+import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 
 const ShopCart = () => {
+  const { t } = useTranslation();
   const [localData, setLocalData] = useState([]);
 
   const totalPayment = localData.reduce((acc, item) => {
@@ -21,21 +24,21 @@ const ShopCart = () => {
         <span className="text-[18px] mr-2">
           <i className="fal fa-shopping-bag"></i>
         </span>
-        <p>Shopping Bag</p>
+        <p>{t("Shopping Bag")}</p>
       </div>
       <div className="flex my-8 max-sm:flex-col">
         <div className="w-[35%] h-[350px] overflow-y-auto max-sm:w-[100%] ">
           <div>
             <h1 className="text-[28px] font-bold text-[#232323] m-3">
-              Shopping cart
+              {t("Shopping cart")}
             </h1>
             <span>
               <a href="#" className="mx-4">
-                Store
+                {t("Store")}
               </a>
               /
               <a href="#" className="mx-4">
-                Shopping cart
+                {t("Shopping cart")}
               </a>
             </span>
           </div>
@@ -44,7 +47,7 @@ const ShopCart = () => {
             <CheckoutCart key={item.id} item={item} />
           ))}
           <div className="flex my-2 justify-between ml-4">
-            <h1>Total Payment :</h1>
+            <h1>{t("Total Payment")} :</h1>
             <p>RS: {totalPayment}</p>
           </div>
         </div>

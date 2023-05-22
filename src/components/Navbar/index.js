@@ -39,9 +39,11 @@ const Navbar = () => {
           </svg>
         </button>
       </div>
-      <ul className={` flex flex-wrap items-center	 gap-10 p-4 ${
+      <ul
+        className={` flex flex-wrap items-center	 gap-10 p-4 ${
           isOpen ? "block" : "hidden"
-        } md:flex md:items-center md:w-auto`} >
+        } md:flex md:items-center md:w-auto`}
+      >
         <li>
           {" "}
           <NavLink

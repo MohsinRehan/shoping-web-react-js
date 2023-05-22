@@ -45,5 +45,18 @@
   "emailplaceholder" : "jouw e-mailadres",
   "Message" : "Bericht",
   "mgsplaceholder" : "Voer uw bericht in",
-  "Submit" : "Indienen"
+  "Submit" : "Indienen",
+  "EmailAdress" : "Vul je e-mailadres in. Dit adres wordt gebruikt om u updates over de status van uw bestelling te sturen.",
+  "Checkout": "Uitchecken",
+  "checkbox" : "Houd mij op de hoogte van nieuws en exclusieve aanbiedingen",
+  "tlsconnection" : "Alle gegevens worden versleuteld verzonden via een beveiligde TLS-verbinding",
+  "Next"  : "Volgende",
+  "Payment information" : "Betalingsinformatie",
+  "payment method" : "Kies een betaalmethode en vul je betaalgegevens in.",
+  "Order confirmation" : "Order bevestiging",
+  "confirmationEmail" : "Plaats je bestelling en ontvang een bevestigingsmail.",
+  "Shopping cart" : "Winkelmand",
+  "Store" : "Winkel",
+  "Total Payment" : "Totale betaling"
+
 }

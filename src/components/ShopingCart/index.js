@@ -44,6 +44,25 @@ export const CheckoutCart = ({ item, i }) => {
     }
   };
 
+  const onPayment = async (product) => {
+    console.log("server");
+    const options = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        price: "price_1MwhBVGTFhcfbVMxxYg9oNFX",
+        quantity: product.quantity,
+      }),
+    };
+    const response = await fetch("/create-checkout-session", options);
+    if (response) {
+      window.location.replace(response.url);
+      console.log("response");
+    }
+  };
+
   return (
     <div>
       <div key={item.id + i} className="w-[100%]">
@@ -88,6 +107,12 @@ export const CheckoutCart = ({ item, i }) => {
           </div>
         </div>
         <hr />
+        <button
+          className="bg-black px-4 py-2 ml-6 text-white"
+          onClick={() => onPayment(item)}
+        >
+          Checkout
+        </button>
       </div>
     </div>
   );

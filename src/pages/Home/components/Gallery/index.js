@@ -10,7 +10,7 @@ export default class Gallery extends Component {
             <div>
               <img
                 src={this.props.image}
-                alt="BJJHK"
+                alt="background-image"
                 className="w-full h-[330px]"
               />
              

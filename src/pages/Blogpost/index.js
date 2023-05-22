@@ -40,7 +40,7 @@ export default function Blogpost() {
         <div className="w-[70%]">
           <img
             src={productItem.img}
-            className="w-full my-4 border-[30px] border-[#DED5D0] border-solid"
+            className="w-full h-[500px] my-4 border-[30px] border-[#DED5D0] border-solid"
           />
         </div>
         <div className="ml-6 w-[28%]">

@@ -37,5 +37,17 @@
   "emailplaceholder" : "Your email address",
   "Message" : "Message",
   "mgsplaceholder" : "Enter your message",
-  "Submit" : "Submit"
+  "Submit" : "Submit",
+  "Checkout" : "Checkout",
+  "EmailAdress" : "Enter your email address. This address is used to send you updates on the status of your order.",
+  "checkbox" : "Keep me up to date on news and exclusive offers",
+  "tlsconnection" : "All data is transmitted encrypted via a secure TLS connection",
+  "Next": "Next",
+  "Payment information" :"Payment information",
+  "payment method" : "Choose a payment method and enter your payment details.",
+  "Order confirmation": "Order confirmation",
+  "confirmationEmail" : "Place your order and receive a confirmation email.",
+  "Shopping cart" : "Shopping cart",
+  "Store" : "Store",
+  "Total Payment" : "Total Payment"
 }
